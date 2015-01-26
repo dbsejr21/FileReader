@@ -28,8 +28,8 @@ public class RandomNumber {
 
 		min = 1;
 		maxForFiles = TestInfo.FILE_EA;
-		maxForChunks = (TestInfo.FILE_SIZE_MB / TestInfo.CHUNK_SIZE_MB) - 1;
-		counter = (TestInfo.FILE_SIZE_MB / TestInfo.CHUNK_SIZE_MB) * maxForFiles;
+		maxForChunks = (TestInfo.FILE_SIZE_BYTE / TestInfo.CHUNK_SIZE_BYTE) - 1;
+		counter = (TestInfo.FILE_SIZE_BYTE / TestInfo.CHUNK_SIZE_BYTE) * maxForFiles;
 		
 		files = new int[counter];
 		chunks = new int[counter];

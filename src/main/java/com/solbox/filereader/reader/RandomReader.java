@@ -20,14 +20,14 @@ import com.solbox.filereader.data.TestInfo;
  */
 public class RandomReader {
 	
-	private int chunkSize;
+	private int chunkSizeByte;
 	private byte[] chunk;
 	
 	
 	public RandomReader() {
 
-		chunkSize = TestInfo.CHUNK_SIZE_MB * 1024 * 1024;
-		chunk = new byte[chunkSize];
+		chunkSizeByte = TestInfo.CHUNK_SIZE_BYTE;
+		chunk = new byte[chunkSizeByte];
 	}
 
 
@@ -37,7 +37,7 @@ public class RandomReader {
 		RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
 		
 		int readSize = 0;
-		randomAccessFile.seek(seekPosition * chunkSize);
+		randomAccessFile.seek(seekPosition * chunkSizeByte);
 		readSize = randomAccessFile.read(chunk);
 		
 		randomAccessFile.close();

@@ -25,14 +25,12 @@ public class Tester {
 	private File directory;
 	private File[] listFile;
 
-	public Tester(TestCase testCase) {
-		this.testCase = testCase;
+	public Tester() {
+		this.testCase = TestInfo.TEST_CASE;
 		directory = new File(TestInfo.TEST_DIRECTORY);
 		listFile = directory.listFiles();
 	}
 
-	public Tester() {
-	}
 
 	public void runTest() throws IOException {
 

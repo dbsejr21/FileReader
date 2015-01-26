@@ -21,14 +21,14 @@ import com.solbox.filereader.data.TestInfo;
  */
 public class SequentialReader {
 	
-	private int chunkSize;
+	private int chunkSizeByte;
 	private byte[] chunk;
 	
 	
 	public SequentialReader () {
 		
-		chunkSize = TestInfo.CHUNK_SIZE_MB * 1024 * 1024;
-		chunk = new byte[chunkSize];
+		chunkSizeByte = TestInfo.CHUNK_SIZE_BYTE;
+		chunk = new byte[chunkSizeByte];
 	}
 	
 	public int readSequentialy(String filePathName) throws IOException{
