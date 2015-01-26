@@ -22,7 +22,7 @@ public class TestInfo {
 	public static int FILE_EA = 35;
 	
 	public static TestCase TEST_CASE = TestCase.SEQUENTIAL;
-	public static String TEST_DIRECTORY = "/stg/solboxtb3/size/300M";
+	public static String TEST_DIRECTORY = "/stg/solboxtb3/size/" + FILE_SIZE_MB + "M";
 	
 
 	public static String toString(int num) {
