@@ -36,7 +36,7 @@ public class Tester {
 
 		String description = TestInfo.toString(TestInfo.FILE_SIZE_MB)
 				+ "MB 파일 " + TestInfo.toString(TestInfo.FILE_EA) + "개에 대해 "
-				+ TestInfo.toString(TestInfo.CHUNK_SIZE_MB) + "MB 청크 단위로 "
+				+ TestInfo.toString(TestInfo.CHUNK_SIZE_KB) + "KB 청크 단위로 "
 				+ testCase.toString() + " READ 테스트";
 
 		System.out.println(description);

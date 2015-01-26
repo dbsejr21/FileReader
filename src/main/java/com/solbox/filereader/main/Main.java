@@ -17,13 +17,12 @@ import com.solbox.filereader.tester.Tester;
 public class Main {
 	public static void main(String[] args) throws IOException {
 
-		Tester tester = new Tester();
-		
+				
 		Inputer inputer = new Inputer(); 
 		inputer.handle(args);
 		
 			
-		
+		Tester tester = new Tester();
 		tester.runTest();
 		
 	}
