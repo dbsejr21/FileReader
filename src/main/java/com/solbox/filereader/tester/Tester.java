@@ -22,12 +22,14 @@ import com.solbox.filereader.reader.SequentialReader;
 public class Tester {
 
 	private TestCase testCase;
+	private String directoryPath;
 	private File directory;
 	private File[] listFile;
 
 	public Tester() {
 		this.testCase = TestInfo.TEST_CASE;
-		directory = new File(TestInfo.TEST_DIRECTORY);
+		directoryPath = TestInfo.TEST_DIRECTORY + TestInfo.FILE_SIZE_MB + "M";
+		directory = new File(directoryPath);
 		listFile = directory.listFiles();
 	}
 
@@ -60,9 +62,10 @@ public class Tester {
 
 		int[] files = randomNumber.getFiles();
 		int[] chunks = randomNumber.getChunks();
-				
+
+		
 		for (int i = 0; i < files.length; i++) {
-			fullPath = TestInfo.TEST_DIRECTORY + "/" + "test_" + TestInfo.FILE_SIZE_MB + "M_" + files[i] + ".avi";
+			fullPath = directoryPath + "/" + "test_" + TestInfo.FILE_SIZE_MB + "M_" + files[i] + ".avi";
 			int size = randomReader.readChunkRandomly(fullPath, chunks[i]);
 		}
 	}

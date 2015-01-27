@@ -30,15 +30,15 @@ public class Inputer {
 		/*
 		 * FILE_SIZE 설정
 		 */
-		TestInfo.FILE_SIZE_MB = Integer.parseInt(args[1]);
+		TestInfo.setFileSizeMB(Integer.parseInt(args[1]));
 
 		/*
 		 * CHUNK_SIZE 설정
 		 */
 		if (TestInfo.FILE_SIZE_MB == 1) {
-			TestInfo.CHUNK_SIZE_KB = 256;
+			TestInfo.setChunkSizeKB(256);
 		}
-
+		
 		/*
 		 * FILE_EA 설정
 		 */
@@ -54,7 +54,6 @@ public class Inputer {
 					.println("java -jar FileReader.jar <Sequential | Random> <FILE_SZIE_MB> <FILE_EA>");
 			System.exit(-1);
 		}
-
 	}
 
 }

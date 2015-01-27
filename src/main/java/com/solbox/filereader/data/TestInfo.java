@@ -22,11 +22,30 @@ public class TestInfo {
 	public static int FILE_EA = 35;
 	
 	public static TestCase TEST_CASE = TestCase.SEQUENTIAL;
-	public static String TEST_DIRECTORY = "/stg/solboxtb3/size/" + FILE_SIZE_MB + "M";
+	public static String TEST_DIRECTORY = "/stg/solboxtb3/size/";
 	
 
 	public static String toString(int num) {
 		return Integer.toString(num);
 	}
+	
+
+	public static void setFileSizeMB(int fileSizeMB) {
+		FILE_SIZE_MB = fileSizeMB;
+		FILE_SIZE_KB = FILE_SIZE_MB * 1024;
+		FILE_SIZE_BYTE = FILE_SIZE_KB * 1024;
+	}
+	
+	public static void setChunkSizeMB(int chunkSizeMB) {
+		CHUNK_SIZE_MB = chunkSizeMB;
+		CHUNK_SIZE_KB = CHUNK_SIZE_MB * 1024;
+		CHUNK_SIZE_BYTE = CHUNK_SIZE_KB * 1024;
+	}
+	
+	public static void setChunkSizeKB(int chunkSizeKB) {
+		CHUNK_SIZE_KB = chunkSizeKB;
+		CHUNK_SIZE_BYTE = CHUNK_SIZE_KB * 1024;
+	}
+	
 	
 }
