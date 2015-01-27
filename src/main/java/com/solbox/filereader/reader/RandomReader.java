@@ -34,14 +34,13 @@ public class RandomReader {
 	public int readChunkRandomly(String filePathName, long seekPosition) throws IOException {
 		
 		File file = new File(filePathName);
-		System.out.println("filePathName: "+ filePathName + "\tseekPostion: "+ seekPosition);
-//		RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
+		RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
 		
 		int readSize = 0;
-//		randomAccessFile.seek(seekPosition * chunkSizeByte);
-//		readSize = randomAccessFile.read(chunk);
-//		
-//		randomAccessFile.close();
+		randomAccessFile.seek(seekPosition * chunkSizeByte);
+		readSize = randomAccessFile.read(chunk);
+		
+		randomAccessFile.close();
 		
 		return readSize;
 	}
