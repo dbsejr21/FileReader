@@ -19,7 +19,7 @@ public class RandomNumber {
 	private int min;
 	private int maxForFiles;
 	private int maxForChunks;
-	private int counter;
+	private int counterForTotalRead;
 
 	private int[] files;
 	private int[] chunks;
@@ -29,10 +29,10 @@ public class RandomNumber {
 		min = 1;
 		maxForFiles = TestInfo.FILE_EA;
 		maxForChunks = (TestInfo.FILE_SIZE_BYTE / TestInfo.CHUNK_SIZE_BYTE) - 1;
-		counter = (TestInfo.FILE_SIZE_BYTE / TestInfo.CHUNK_SIZE_BYTE) * maxForFiles;
+		counterForTotalRead = (TestInfo.FILE_SIZE_BYTE / TestInfo.CHUNK_SIZE_BYTE) * maxForFiles;
 			
-		files = new int[counter];
-		chunks = new int[counter];
+		files = new int[counterForTotalRead];
+		chunks = new int[counterForTotalRead];
 		
 	}
 
@@ -44,12 +44,12 @@ public class RandomNumber {
 	}
 	
 	public int[] getFiles() {
-		makeRandomNumber(files, min, maxForFiles, counter);
+		makeRandomNumber(files, min, maxForFiles, counterForTotalRead);
 		return files;
 	}
 
 	public int[] getChunks() {
-		makeRandomNumber(chunks, min, maxForChunks, counter);
+		makeRandomNumber(chunks, min, maxForChunks, counterForTotalRead);
 		return chunks;
 	}
 

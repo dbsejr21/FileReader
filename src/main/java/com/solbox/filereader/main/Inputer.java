@@ -9,6 +9,15 @@ public class Inputer {
 
 	}
 
+	/**
+	 * 
+	 * @param args
+	 * 
+	 * 메인 매개변수 받아서 TestInfo에 저장.
+	 * FILE_SIZE가 1일 경우 Chunk Size를 256KB로 함. (다른 테스트의 경우 1MB 디폴트)
+	 * 
+	 * 
+	 */
 	public void handle(String[] args) {
 		
 		/*

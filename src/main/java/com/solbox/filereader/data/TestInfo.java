@@ -9,8 +9,12 @@ package com.solbox.filereader.data;
  */
 public class TestInfo {
 	
-	// Default Test Info는 아래와 같음
-	
+	/*
+	 * Default Test Info는 아래와 같음
+	 * 
+	 * 오직 FILE_SIZE_BYTE와 CHUNK_SIZE_BYTE 만으로 연산 수행.
+	 */
+		
 	public static int FILE_SIZE_MB = 300;
 	public static int FILE_SIZE_KB = FILE_SIZE_MB * 1024;
 	public static int FILE_SIZE_BYTE = FILE_SIZE_KB * 1024;
